@@ -1,6 +1,6 @@
 # Ejemplo de API con autenticacion usando JWT
 
-Ejemplo de API REST con autenticacion de usuarios usando JWT https://jwt.io/.
+Ejemplo de API REST con autenticacion de usuarios usando tokens [JWT](https://jwt.io/).
 
 Usa [Fiber](https://docs.gofiber.io/) como framework para el backend y [gorm](https://gorm.io/) como ORM para la base de datos.
 
@@ -8,13 +8,13 @@ Usa **jwt-go** para los tokens `jwt`.
 
 Usa **SQLite** como base de datos de ejemplo.
 
-Tiene los siguientes endpoints:
+## Tiene los siguientes endpoints:
 
 
-- Ping
+### Ping
 
 ```
-	GET /api/ping
+GET /api/ping
 ```
 
 Ejemplo:
@@ -24,13 +24,13 @@ Ejemplo:
 http://127.0.0.1:8000/api/ping
 ```
 
-Debe retornar un codigo 200 y un JSON con el mensaje: *"success"*.
+Retorna un codigo 200 y un JSON con el mensaje: *"success"*.
 
 
-- Registro
+### Registro
 
 ```
-	POST /api/register
+POST /api/register
 ```
 
 Ejemplo:
@@ -53,10 +53,10 @@ Retorna un codigo 200 con un JSON con el id de usuario, nombre y email.
 Si el usuario ya existe retorna un codigo 400 y un json con el mensaje *Already in use*.
 
 
-- Inicio de Sesion
+### Inicio de Sesion
 
 ```
-    POST /api/login
+POST /api/login
 ```
 
 Ejemplo:
@@ -81,10 +81,10 @@ Si la cuenta no existe retorna un codigo 404 y un JSON con el mensaje *"Account 
 Si la contrasena es incorrecta retorna un codigo 400 y un JSON con el mensaje *"Incorrect Password"*.
 
 
-- Obtener datos del usuario (requiere estar autenticado)
+### Obtener datos del usuario (requiere estar autenticado)
 
 ```
-    GET /api/user
+GET /api/user
 ```
 
 Ejemplo:
@@ -98,10 +98,10 @@ Si no se esta auntenticado retorna un codigo 401 y un JSON con el mensaje *"Not 
 Si se esta auntenticado retorna un codigo 200 y un JSON con el id de usuario, nombre y email.
 
 
-- Cierre de Sesion
+### Cierre de Sesion
 
 ```
-	POST /api/logout
+POST /api/logout
 ```
 
 Ejemplo:
@@ -117,25 +117,25 @@ Invalida y elimina la Cookie con el token *jwt* y retorna un codigo 200.
 
 ## Compilar
 
-Instalar go:
+1. Instalar Go:
 
 [https://go.dev/dl/]()
 
-Clonar repositorio:
+2. Clonar repositorio:
 
 ```
-git clone
-cd
+git clone https://github.com/jorgesc231/go_api_jwt.git
+cd go_api_jwt
 ```
 
-Compilar:
+3. Compilar:
 
 
 ```
 go build main.go
 ```
 
-Ejecutar:
+4. Ejecutar:
 
 ```
 ./main
@@ -146,7 +146,7 @@ Ejecutar:
 ## Compilar para usar una raspberry pi como servidor
 
 
-(Pendiente...)
+[Tutorial](https://github.com/jorgesc231/go_api_jwt)
 
 
 ## TODO
