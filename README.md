@@ -146,7 +146,7 @@ go build main.go
 ## Compilar para usar una raspberry pi como servidor
 
 
-[Tutorial](https://github.com/jorgesc231/go_api_jwt)
+[Tutorial](https://github.com/jorgesc231/tutoriales_raspberry_pi/tree/master/go_cross_rpi1)
 
 
 ## TODO
